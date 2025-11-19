@@ -1,3 +1,7 @@
+SELECT product_id 
+FROM Products
+WHERE low_fats = 'Y' AND recyclable = 'Y';
+
 /*Table: Products
 
 +-------------+---------+
@@ -33,7 +37,5 @@ Output:
 | 3           |
 +-------------+*/
 
-SELECT product_id 
-FROM Products
-WHERE low_fats = 'Y' AND recyclable = 'Y';
+
 
