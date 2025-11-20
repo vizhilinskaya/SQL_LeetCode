@@ -4,12 +4,11 @@ Return the resulting table in any order.*/
 SELECT product_name, 
        year, 
        price
-FROM Sales s 
-LEFT JOIN Product p 
-  ON s.product_id = p.product_id;
+  FROM Sales s 
+       LEFT JOIN Product p 
+       ON s.product_id = p.product_id;
 
 /*Table: Sales
-
 +-------------+-------+
 | Column Name | Type  |
 +-------------+-------+
@@ -25,7 +24,6 @@ Each row of this table shows a sale on the product product_id in a certain year.
 Note that the price is per unit.
  
 Table: Product
-
 +--------------+---------+
 | Column Name  | Type    |
 +--------------+---------+
