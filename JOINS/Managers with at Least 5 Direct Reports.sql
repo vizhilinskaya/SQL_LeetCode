@@ -2,9 +2,10 @@
 Return the result table in any order.*/
 
 SELECT m.name 
-FROM employee m
-JOIN employee e ON e.managerId = m.id
-GROUP BY m.id
+  FROM employee m
+       JOIN employee e 
+       ON e.managerId = m.id
+ GROUP BY m.id
 HAVING COUNT(e.id) >= 5;
 
 /*Table: Employee
