@@ -2,15 +2,14 @@
 Return the result table sorted in any order.*/
 
 SELECT v.customer_id, 
-  COUNT(v.visit_id) AS count_no_trans 
-FROM Visits v
-LEFT JOIN Transactions t 
-  ON v.visit_id = t.visit_id
-WHERE t.transaction_id IS NULL
-GROUP BY v.customer_id;
+       COUNT(v.visit_id) AS count_no_trans 
+  FROM Visits v
+       LEFT JOIN Transactions t 
+       ON v.visit_id = t.visit_id
+ WHERE t.transaction_id IS NULL
+ GROUP BY v.customer_id;
 
 /*Table: Visits
-
 +-------------+---------+
 | Column Name | Type    |
 +-------------+---------+
@@ -21,7 +20,6 @@ visit_id is the column with unique values for this table.
 This table contains information about the customers who visited the mall.
 
 Table: Transactions
-
 +----------------+---------+
 | Column Name    | Type    |
 +----------------+---------+
