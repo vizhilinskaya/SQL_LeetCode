@@ -3,12 +3,11 @@ Return the result table in any order.*/
 
 SELECT u.unique_id,
        e.name     
-FROM Employees e
-LEFT JOIN EmployeeUNI u
-  ON e.id = u.id;
+  FROM Employees e
+       LEFT JOIN EmployeeUNI u
+       ON e.id = u.id;
 
 /*Table: Employees
-
 +---------------+---------+
 | Column Name   | Type    |
 +---------------+---------+
@@ -19,7 +18,6 @@ id is the primary key (column with unique values) for this table.
 Each row of this table contains the id and the name of an employee in a company.
  
 Table: EmployeeUNI
-
 +---------------+---------+
 | Column Name   | Type    |
 +---------------+---------+
